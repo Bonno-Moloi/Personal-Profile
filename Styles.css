@@ -1,0 +1,158 @@
+
+body {
+  font-family: 'Segoe UI', Roboto, system-ui, -apple-system, 'Arial', sans-serif;
+  background-color: #fafbfc;
+  color: #1e293b;
+  line-height: 1.6;
+  scroll-behavior: smooth;  
+}
+
+h2 {
+  color: #0a58ca;           /* deeper blue than #007bff, but still related */
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+/* Custom list styling (skills, about extras) — similar to exercise reference */
+ul.skill-list, 
+ul:not(.navbar-nav):not(.list-unstyled) {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul.skill-list li,
+section#skills ul li,
+section#certifications ul li {
+  background: #f0f4f8;       /* soft background */
+  padding: 0.65rem 1rem;
+  margin: 0.5rem 0;
+  border-left: 6px solid #0d6efd; /* primary blue */
+  border-radius: 0 12px 12px 0;   /* subtle rounded right side */
+  transition: transform 0.1s ease, box-shadow 0.2s;
+  font-weight: 450;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+ul.skill-list li:hover {
+  transform: translateX(4px);
+  background: #e6edf7;
+  border-left-width: 8px;
+}
+
+/* education cards — tiny extra polish */
+.card {
+  border: none;
+  transition: all 0.15s;
+}
+.card:hover {
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.08) !important;
+}
+
+/* navbar brand customization */
+.navbar-brand {
+  font-size: 1.4rem;
+  letter-spacing: -0.5px;
+}
+
+/* Hero section background & profile image enhancements */
+.hero-section {
+  background: linear-gradient(145deg, #ffffff 0%, #f3f6fc 100%);
+  border-bottom: 1px solid #dee2e6;
+}
+
+/* section spacing (scroll margin for fixed navbar) */
+.scroll-margin {
+  scroll-margin-top: 70px;
+}
+
+/* contact icons alignment */
+#contact i {
+  width: 1.75rem;
+  text-align: center;
+}
+
+/* bootstrap overrides for buttons (match primary) */
+.btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+.btn-primary:hover {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+
+/* custom border color for elements using #007bff (reference from exercise) */
+h2 i, .hero-section img {
+  border-color: #007bff !important;
+}
+
+/* make profile image border use the exact #007bff from the prompt */
+.hero-section img {
+  border: 4px solid #007bff !important;
+  transition: transform 0.3s ease;
+}
+.hero-section img:hover {
+  transform: scale(1.02);
+}
+
+/* additional style for address-like block */
+.bg-white p i {
+  color: #007bff;
+}
+
+/* footer minimal */
+footer {
+  background-color: #121212 !important;
+}
+
+/* responsive adjustments */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.8rem;
+  }
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+}
+
+/* custom utility for icons inside h2 (ensure blue) */
+h2 i {
+  color: #007bff !important;
+}
+
+/* also for the certifications badge modal etc */
+.modal-content .badge.bg-primary {
+  background-color: #007bff !important;
+}
+
+/* for navbar toggler icon (light) */
+.navbar-dark .navbar-toggler-icon {
+  filter: brightness(0.9);
+}
+
+/* added left border for all list that follow exercise pattern 
+   but not interfering with bootstrap nav etc */
+section#about ul:not(.navbar-nav),
+section#contact ul:not(.navbar-nav) {
+  list-style-type: none;
+  padding-left: 0;
+}
+section#about ul li, 
+section#contact ul li {
+  background: #f8f9fa;
+  padding: 8px 12px;
+  margin: 6px 0;
+  border-left: 5px solid #007bff;
+  border-radius: 0 8px 8px 0;
+}
+
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  margin: 0 0.2rem;
+  transition: background-color 0.2s;
+}
+.navbar-nav .nav-link:hover {
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 6px;
+  }
