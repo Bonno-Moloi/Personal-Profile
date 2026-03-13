@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Personal Profile · Bootstrap 5</title>
+  <!-- Bootstrap 5 CSS (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="style.css">
+  <!-- (optional) Font Awesome for contact icons, if you want extra polish -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+  <!-- ==================== NAVBAR (Bootstrap dark, with toggler) ==================== -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-semibold" href="#">
+        <i class="fas fa-user-astronaut me-2"></i>Bonno Moloi 
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <!-- optional extra: certifications (BONUS) -->
+          <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO SECTION (profile image, name, short bio) ==================== -->
+  <section class="hero-section py-5 bg-light">
+    <div class="container text-center">
+      <!-- Profile image from unsplash (place in images subfolder later, but using placeholder for demo) -->
+      <img src="https://images.unsplash.com/photo-1531427186629-7fd5d1bc7bf3?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" 
+           alt="Profile" class="rounded-circle img-thumbnail mb-4" width="160" height="160"
+           style="object-fit: cover; border: 4px solid #007bff;">
+      <h1 class="display-5 fw-bold">Alex Chen</h1>
+      <p class="lead text-muted">Frontend developer · problem solver · lifelong learner</p>
+      <p class="col-lg-6 mx-auto">I craft clean, responsive web experiences with a passion for accessibility and modern UI. Based in Austin, TX.</p>
+      <div class="d-flex justify-content-center gap-3 mt-3">
+        <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane me-2"></i>Get in touch</a>
+        <a href="#" class="btn btn-outline-secondary"><i class="fas fa-file-pdf me-2"></i>Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MAIN CONTENT CONTAINER ==================== -->
+  <div class="container my-5">
+
+    <!-- About section -->
+    <section id="about" class="mb-5 scroll-margin">
+      <h2 class="border-bottom pb-2"><i class="fas fa-smile me-2" style="color:#007bff;"></i> About me</h2>
+      <div class="row mt-4">
+        <div class="col-lg-8">
+          <p class="fs-5">I'm Alex, a creative front‑end developer with 4+ years of experience turning ideas into responsive websites. I believe that great design is both beautiful and functional. I love working with Bootstrap, CSS flex/grid, and modern JavaScript. When I'm not coding, I enjoy hiking, reading sci‑fi, and experimenting with new CSS features.</p>
+          <p><strong>Based in:</strong> Austin, Texas 🌵</p>
+        </div>
+        <div class="col-lg-4">
+          <div class="bg-white p-3 rounded-3 shadow-sm">
+            <p class="mb-1"><i class="far fa-envelope me-2 text-primary"></i> bonnomoloi66@gmail.com.dev</p>
+            <p class="mb-1"><i class="fas fa-phone-alt me-2 text-primary"></i> +267 77864737</p>
+            <p class="mb-0"><i class="fab fa-github me-2 text-dark"></i> github/alex-chen-dev</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills section (with Bootstrap grid + custom list style from style.css) -->
+    <section id="skills" class="mb-5 scroll-margin">
+      <h2 class="border-bottom pb-2"><i class="fas fa-code me-2" style="color:#007bff;"></i> Technical skills</h2>
+      <div class="row mt-4 g-4">
+        <!-- using custom ul (refer to style.css) inside columns -->
+        <div class="col-md-4">
+          <div class="p-3 bg-white rounded-3 border">
+            <h5 class="fw-bold"><i class="fas fa-laptop-code me-2"></i>Languages</h5>
+            <ul class="skill-list">
+              <li>HTML5 / semantic markup</li>
+              <li>CSS3 (Flex, Grid, Animations)</li>
+              <li>JavaScript (ES6+)</li>
+              <li>TypeScript (basic)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-3 bg-white rounded-3 border">
+            <h5 class="fw-bold"><i class="fas fa-paint-brush me-2"></i>Frameworks & tools</h5>
+            <ul class="skill-list">
+              <li>Bootstrap 5 / Tailwind</li>
+              <li>React (hooks, context)</li>
+              <li>VS Code, Git & GitHub</li>
+              <li>Figma / Adobe XD</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-3 bg-white rounded-3 border">
+            <h5 class="fw-bold"><i class="fas fa-heart me-2 text-danger"></i>Soft skills</h5>
+            <ul class="skill-list">
+              <li>Collaborative teamwork</li>
+              <li>Agile / Scrum</li>
+              <li>Problem solving</li>
+              <li>Clear communication</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education section -->
+    <section id="education" class="mb-5 scroll-margin">
+      <h2 class="border-bottom pb-2"><i class="fas fa-graduation-cap me-2" style="color:#007bff;"></i> Education</h2>
+      <div class="row mt-4">
+        <div class="col-md-6">
+          <div class="card mb-3 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">B.Sc. in Information Systems</h5>
+              <h6 class="card-subtitle mb-2 text-muted">University of Texas at Austin | 2016 – 2020</h6>
+              <p class="card-text">Relevant coursework: web development, HCI, database design, software engineering. Graduated cum laude.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card mb-3 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Full‑stack Web Development Bootcamp</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Coding Dojo | 2021 (remote)</h6>
+              <p class="card-text">Immersive 16‑week program focused on MERN stack (MongoDB, Express, React, Node). Built multiple full‑stack applications.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXTRA SECTION: Certifications (BONUS) + Bootstrap modal example -->
+    <section id="certifications" class="mb-5 scroll-margin">
+      <h2 class="border-bottom pb-2"><i class="fas fa-certificate me-2" style="color:#007bff;"></i> Certifications & awards</h2>
+      <div class="row mt-4">
+        <div class="col-lg-8">
+          <ul class="skill-list">
+            <li><i class="fas fa-badge-check text-primary me-2"></i>Responsive Web Design – freeCodeCamp</li>
+            <li><i class="fas fa-badge-check text-primary me-2"></i>JavaScript Algorithms and Data Structures – freeCodeCamp</li>
+            <li><i class="fas fa-trophy me-2 text-warning"></i>Hackathon winner: "Best UI/UX" – ATX Hack for Change 2023</li>
+          </ul>
+        </div>
+        <div class="col-lg-4 d-flex align-items-center">
+          <!-- Bootstrap button triggering modal -->
+          <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#certModal">
+            <i class="fas fa-expand me-2"></i>quick view
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact section -->
+    <section id="contact" class="mb-5 scroll-margin">
+      <h2 class="border-bottom pb-2"><i class="fas fa-address-card me-2" style="color:#007bff;"></i> Contact</h2>
+      <div class="row mt-4">
+        <div class="col-md-6">
+          <p>I'm currently open to new opportunities and collaborations. Feel free to reach out via email or socials.</p>
+          <p class="mb-2"><i class="fas fa-envelope me-2 text-primary"></i> alex.chen@example.dev</p>
+          <p class="mb-2"><i class="fab fa-linkedin me-2 text-primary"></i> /in/alex-chen-dev</p>
+          <p class="mb-2"><i class="fab fa-github me-2"></i> github/alex-chen-dev</p>
+          <p class="mb-0"><i class="fab fa-twitter me-2 text-info"></i> @bonno_codes</p>
+        </div>
+        <div class="col-md-6">
+          <!-- simple Bootstrap card with contact form (mock) — still using Bootstrap components -->
+          <div class="card border-0 bg-light">
+            <div class="card-body">
+              <h5 class="card-title">Send a quick message</h5>
+              <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Your name" disabled value="(demo only)">
+              </div>
+              <div class="mb-3">
+                <input type="email" class="form-control" placeholder="Email address" disabled>
+              </div>
+              <div class="mb-3">
+                <textarea class="form-control" rows="2" placeholder="Your message ..." disabled></textarea>
+              </div>
+              <button class="btn btn-secondary" disabled><i class="fas fa-paper-plane me-2"></i>Send (disabled demo)</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div> <!-- end container -->
+
+  <!-- Footer (simple) -->
+  <footer class="bg-dark text-white text-center py-4 mt-4">
+    <div class="container">
+      <p class="mb-0">✨ built with Bootstrap 5 & custom CSS ✨</p>
+      <p class="small mb-0">© 2026 Bonno Moloi — hosted on GitHub Pages</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap modal (bonus) for certifications -->
+  <div class="modal fade" id="certModal" tabindex="-1" aria-labelledby="certModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="certModalLabel"><i class="fas fa-certificate me-2"></i>Credentials</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul class="list-unstyled">
+            <li class="mb-2"><span class="badge bg-primary me-2">2024</span> <strong>Bootstrap 5 essential training</strong> – LinkedIn</li>
+            <li class="mb-2"><span class="badge bg-primary me-2">2023</span> <strong>Meta Front‑End Developer</strong> – Coursera (in progress)</li>
+            <li class="mb-2"><span class="badge bg-success me-2">2022</span> <strong>Google UX Design certificate</strong> – Coursera</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-sm btn-primary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS bundle (required for toggler, modal etc.) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- optional smooth scroll (just extra) -->
+  <script>
+    // optional smooth scroll for anchor links (in case default isn't smooth)
+    document.querySelectorAll('.navbar-nav a.nav-link').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
